@@ -1,0 +1,184 @@
+        /* Common styles for both themes */
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .converter-container {
+            padding: 20px;
+            border-radius: 15px;
+            max-width: 400px;
+            width: 100%;
+            transition: all 0.3s ease;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 2em;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        .input-group {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        input, select, button {
+            padding: 15px;
+            border-radius: 10px;
+            font-size: 1em;
+            transition: all 0.3s ease;
+        }
+
+        button {
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .result {
+            margin-top: 20px;
+            padding: 15px;
+            border-radius: 10px;
+            font-size: 1.2em;
+            text-align: center;
+        }
+
+        /* Styles for the dynamic (default) theme */
+        #dynamic-style {
+            background: linear-gradient(135deg, #ffcc33, #ff66cc);
+        }
+
+        #dynamic-style .converter-container {
+            background: rgba(255, 255, 255, 0.9);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            backdrop-filter: blur(10px);
+        }
+
+        #dynamic-style h1, #dynamic-style .result {
+            color: #333;
+        }
+
+        #dynamic-style input, #dynamic-style select {
+            background: #f0f0f0;
+            border: none;
+        }
+
+        #dynamic-style input:focus, #dynamic-style select:focus {
+            background: #e0e0e0;
+            outline: none;
+        }
+
+        #dynamic-style button {
+            background: #ff66cc;
+            color: #fff;
+            border: none;
+        }
+
+        #dynamic-style button:hover {
+            background: #e55ab2;
+        }
+
+        #dynamic-style .result {
+            background: #fff5e1;
+        }
+
+        /* Styles for the plain theme */
+        #plain-style {
+            background: #ffffff;
+        }
+
+        #plain-style .converter-container {
+            background: #ffffff;
+            box-shadow: none;
+        }
+
+        #plain-style h1, #plain-style .result {
+            color: #000000;
+        }
+
+        #plain-style input, #plain-style select {
+            background: #ffffff;
+            border: 1px solid #ccc;
+        }
+
+        #plain-style button {
+            background: #cccccc;
+            color: #000000;
+            border: 1px solid #ccc;
+        }
+
+        #plain-style .result {
+            background: #f0f0f0;
+        }
+
+        /* Toggle switch styles */
+        .toggle-switch {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            display: flex;
+            align-items: center;
+        }
+
+        .switch {
+            position: relative;
+            display: inline-block;
+            width: 60px;
+            height: 34px;
+        }
+
+        .switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #ccc;
+            transition: .4s;
+            border-radius: 34px;
+        }
+
+        .slider:before {
+            position: absolute;
+            content: "";
+            height: 26px;
+            width: 26px;
+            left: 4px;
+            bottom: 4px;
+            background-color: white;
+            transition: .4s;
+            border-radius: 50%;
+        }
+
+        input:checked + .slider {
+            background-color: #ff66cc;
+        }
+
+        input:checked + .slider:before {
+            transform: translateX(26px);
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 0.8em;
+            color: #555;
+            position: absolute;
+            bottom: 10px;
+            width: 100%;
+        }

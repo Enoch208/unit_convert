@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dynamicUnitConverter</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body id="plain-style">
+    <div class="converter-container">
+        <h1>Unit Converter</h1>
+        <div class="input-group">
+            <input type="number" id="userInput" placeholder="Enter value">
+            <select id="unit">
+                <option value="">Select conversion</option>
+                <option value="milesToKm">Miles to Kilometers</option>
+                <option value="kmToMiles">Kilometers to Miles</option>
+                <option value="fToC">Fahrenheit to Celsius</option>
+                <option value="cToF">Celsius to Fahrenheit</option>
+            </select>
+            <button onclick="convert()">Convert</button>
+        </div>
+        <div class="result" id="resultElement"></div>
+    </div>
+    <div class="toggle-switch">
+        <label class="switch">
+            <input type="checkbox" id="styleToggle" onclick="toggleStyle()">
+            <span class="slider"></span>
+        </label>
+    </div>
+    <footer>
+        © 2022 Made with love by Enoch
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

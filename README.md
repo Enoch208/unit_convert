@@ -32,8 +32,8 @@ Check out the live demo of the project [here](https://gue4o4.mimo.run/index.html
 To use this project locally, clone the repository and open the `index.html` file in your browser.
 
 ```bash
-git clone [repository link]
-cd dynamic-unit-converter
+git clone https://github.com/Enoch208/unit_convert.git
+cd unit_convert
 open index.html
 ```
 
